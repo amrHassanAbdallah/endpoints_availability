@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 
-const endpoints = require('./app/routes/endpoints');
+const endpoints = require('./routes/endpoints');
 
 app.use('/api/', endpoints);
 
