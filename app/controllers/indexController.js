@@ -1,11 +1,11 @@
 class indexController {
 
-    async static get(req, res) {
+    static async get(req, res) {
         return res.status(this.getRandomStatusCode()).json({"message": "test with number " + req.params.number});
     }
 
 
-    async static delayedGet() {
+    static async delayedGet() {
         setTimeout(() => {
             return res.status(this.getRandomStatusCode()).json({"message": "test delayed with number " + req.params.number});
         }, 6000);
