@@ -1,13 +1,13 @@
 class indexController {
 
     static async get(req, res) {
-        return res.status(this.getRandomStatusCode()).json({"message": "test with number " + req.params.number});
+        return res.status(indexController.getRandomStatusCode()).json({"message": "test with number " + req.params.number});
     }
 
 
-    static async delayedGet() {
+    static async delayedGet(req, res) {
         setTimeout(() => {
-            return res.status(this.getRandomStatusCode()).json({"message": "test delayed with number " + req.params.number});
+            return res.status(indexController.getRandomStatusCode()).json({"message": "test delayed with number " + req.params.number});
         }, 6000);
     }
 
